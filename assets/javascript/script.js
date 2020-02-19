@@ -22,7 +22,6 @@ $.ajax({
     var yields = $("<h5>").text("Yields: " + response.hits[0].recipe.yield);
     var image = $("<img>").attr("src", response.hits[0].recipe.image);
 
-
 // to link and append to carousel
         $("#").append(label);
         $("#").append(url);
