@@ -12,4 +12,5 @@ THEN the saved recipe is added to list of favorite recipes <br>
 WHEN I click on favorite recipes link <br>
 THEN I am presented with list of saved recipes <br>
 
-See some delicious recipes [here](https://dorntrevor7.github.io/Flavor-Savor/)!!
+Find some delicious recipes: [Flavor Savor](https://dorntrevor7.github.io/Flavor-Savor/)
+
