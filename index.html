@@ -2,16 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flavor Savor</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Required Core Stylesheet -->
+    <link rel="stylesheet" href="assets/css/libs/glide.core.min.css" />
+    ​
+    <!-- Optional Theme Stylesheet -->
+    <link rel="stylesheet" href="assets/css/libs/glide.theme.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Special+Elite&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" rel="stylesheet">
-    <title>Flavor Savor</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
@@ -35,6 +38,28 @@
             </div>
         </p>
     </nav>
+    
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide">
+                    <img src="http://placehold.it/200x200" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img src="http://placehold.it/200x200" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img src="http://placehold.it/200x200" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img src="http://placehold.it/200x200" alt="" />
+                </li>
+                <li class="glide__slide">
+                    <img src="http://placehold.it/200x200" alt="" />
+                </li>
+            </ul>
+        </div>
+    </div>
 
 
 
@@ -42,7 +67,13 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/javascript/libs/glide.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script>
+        new Glide(".glide", { type: "carousel", gap: "10px", perView: 4 }).mount({
+            Controls: Glide.Controls
+        });
+    </script>
 
 </body>
 
