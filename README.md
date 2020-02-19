@@ -11,3 +11,6 @@ WHEN I view a recipe I have an option to save the recipe <br>
 THEN the saved recipe is added to list of favorite recipes <br>
 WHEN I click on favorite recipes link <br>
 THEN I am presented with list of saved recipes <br>
+
+Find some delicious recipes: [Flavor Savor](https://dorntrevor7.github.io/Flavor-Savor/)
+
