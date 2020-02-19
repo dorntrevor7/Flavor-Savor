@@ -7,15 +7,19 @@ var recipeURL = "https://api.edamam.com/search?app_key=" + recipeKEY + "&app_id=
 $.ajax({
     url: recipeURL,
     method: "GET"
+    
 }).then(function(response){
+
     console.log(response.hits[0].recipe.label);
     console.log(response.hits[0].recipe.image);
     console.log(response.hits[0].recipe.url);
     console.log(response.hits[0].recipe.yield);
+
     var label=  $("<h3>").text(response.hits[0].recipe.label);
     var url = $("<a>").attr("href", response.hits[0].recipe.url).text("Go To Recipe");
     var yields = $("<h5>").text("Yields: " + response.hits[0].recipe.yield);
     var image = $("<img>").attr("src", response.hits[0].recipe.image);
+
 // to link and append to carousel
     $("#").append(label);
     $("#").append(url);
