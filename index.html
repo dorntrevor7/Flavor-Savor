@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <nav class="level">
         <p class="level-item has-text-centered">
             <a class="link is-info home">Home</a>
@@ -41,6 +42,29 @@
         </p>
     </nav>
 
+
+
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script>
+    var appID = "f918aaaf";
+    var appKEY = "8b9bf08b57c94197c63717a122f611d7";
+    search = "chicken";
+
+    var queryURL = "https://api.edamam.com/search?app_key=" + appKEY + "&app_id=" + appID + "&q=" + search + "&to=18"; 
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+    });
+</script>
 </body>
 
 </html>
