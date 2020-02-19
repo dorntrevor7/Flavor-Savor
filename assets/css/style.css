@@ -1,0 +1,40 @@
+nav{ 
+    
+    background-color: #77f1be;
+    color: #080808;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+
+    
+}
+
+.home{
+    font-family: 'Special Elite', cursive; 
+    color: #080808;
+    font-size: 30px;
+    text-shadow: 4px 4px 6px grey;
+}
+
+.menu{
+    font-family: 'Special Elite', cursive; 
+    color: #080808;
+    font-size: 30px;
+    text-shadow: 4px 4px 6px grey;
+}
+
+.flavorSavor{
+    font-family: 'Fredericka the Great', cursive; 
+    color: white;
+    text-shadow: 4px 4px 6px black;
+    font-size: 60px;
+    padding: 0px;
+}
+
+.savedRecipes{
+    font-family: 'Special Elite', cursive; 
+    color: #080808;
+    font-size: 30px;
+    text-shadow: 4px 4px 6px grey;
+}
