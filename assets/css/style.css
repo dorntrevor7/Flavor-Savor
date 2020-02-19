@@ -1,13 +1,15 @@
+body{
+    background-color: rgb(226, 225, 225);
+}
+
 nav{ 
-    
     background-color: #77f1be;
     color: #080808;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 0px;
-
-    
+    border-bottom: ridge 5px grey;
 }
 
 .home{
@@ -39,3 +41,9 @@ nav{
     text-shadow: 4px 4px 6px grey;
 }
 
+.input{
+    border-width: 4px;
+    border-color: #d9f7ea;
+    color: black;
+    background-color: #77f1be;
+}
