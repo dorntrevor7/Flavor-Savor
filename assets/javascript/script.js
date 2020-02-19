@@ -1,8 +1,10 @@
 var recipeID = "f918aaaf";
 var recipeKEY = "8b9bf08b57c94197c63717a122f611d7";
-search = "chicken";
+search = $(".input").val();
 
-var recipeURL = "https://api.edamam.com/search?app_key=" + recipeKEY + "&app_id=" + recipeID + "&q=" + search + "&to=18"; 
+// on click event for search button
+$("#searchBtn").on("click", function(e){
+    var recipeURL = "https://api.edamam.com/search?app_key=" + recipeKEY + "&app_id=" + recipeID + "&q=" + search + "&to=18"; 
 
 $.ajax({
     url: recipeURL,
@@ -20,9 +22,11 @@ $.ajax({
     var yields = $("<h5>").text("Yields: " + response.hits[0].recipe.yield);
     var image = $("<img>").attr("src", response.hits[0].recipe.image);
 
+
 // to link and append to carousel
-    $("#").append(label);
-    $("#").append(url);
-    $("#").append(yields);
-    $("#").append(image);
+        $("#").append(label);
+        $("#").append(url);
+        $("#").append(yields);
+        $("#").append(image);
+    });
 });
