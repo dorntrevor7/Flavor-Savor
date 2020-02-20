@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(226, 225, 225);
+    background-image: url(https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 }
 
 nav{ 
@@ -12,7 +12,7 @@ nav{
     border-bottom: ridge 5px grey;
 }
 
-.home{
+#home{
     font-family: 'Special Elite', cursive; 
     color: #080808;
     font-size: 30px;
@@ -34,7 +34,7 @@ nav{
     padding: 0px;
 }
 
-.savedRecipes{
+#savedRecipes{
     font-family: 'Special Elite', cursive; 
     color: #080808;
     font-size: 30px;
@@ -50,4 +50,21 @@ nav{
     border-color: #d9f7ea;
     color: black;
     background-color: #77f1be;
+}
+
+/* style for homeRecipes */
+#homeRecipes{
+    text-align: center;
+    font-family: 'Special Elite', cursive; 
+    color: #080808;
+}
+.sauce{
+    border: ridge #77f1be 4px;
+    width: 700px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
 }
