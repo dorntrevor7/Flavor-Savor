@@ -31,7 +31,7 @@
         <p class="level-item has-text-centered ">
             <div class="field">
                 <div class="columns control search">
-                    <input class="input is-small" type="text" placeholder="Ingredient"><button
+                    <input class="input is-small" id="search" type="text" placeholder="Ingredient"><button
                         id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
@@ -41,20 +41,15 @@
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
+                <li class="glide__slide" id="recipe1">
                 </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
+                <li class="glide__slide" id="recipe2">
                 </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
+                <li class="glide__slide" id="recipe3">
                 </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
+                <li class="glide__slide" id="recipe4">
                 </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
+                <li class="glide__slide" id="recipe5">
                 </li>
             </ul>
         </div>
@@ -64,7 +59,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/script.js"></script>
     <script src="assets/javascript/libs/glide.min.js"></script>
     <script src="assets/javascript/script.js"></script>
     <script>
