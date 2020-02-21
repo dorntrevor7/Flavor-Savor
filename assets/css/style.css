@@ -81,8 +81,9 @@ nav{
 
 /* Style for the footer */
 .copyright {
+    position: fixed;
+    bottom: 0;
     padding-top: 5px;
-    position: absolute;
     width: 100%;
     font-size: 10px;
     color: lightslategray;
