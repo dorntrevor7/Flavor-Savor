@@ -8,7 +8,7 @@ In this project our team created a web based app called Flavor Savor that finds 
 * Opens to a display of recipes
 * Search a desired ingredient
     * displays desired ingredient recipes
-* Click on the Make Me Hunrgy tab
+* Click on the Food Giphys tab
     * displays giphys
 
 <br>
