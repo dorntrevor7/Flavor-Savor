@@ -24,6 +24,7 @@ $.ajax({
     var url = $("<a>")
       .attr("href", response.hits[i].recipe.url)
       .text("Go To Recipe");
+      url.attr("target", "_blank");
     var yields = $("<h5>").text("Yields: " + response.hits[i].recipe.yield);
     var image = $("<img>").attr("src", response.hits[i].recipe.image);
     // appending all to a div
@@ -37,7 +38,15 @@ $.ajax({
   glide = new Glide(".glide", {
     type: "carousel",
     gap: "10px",
-    perView: 4
+    perView: 4,
+    breakpoints: {
+      1024: {
+        perView: 2
+      },
+      600: {
+        perView: 1
+      }
+    }
   }).mount();
 });
 
@@ -45,7 +54,6 @@ $.ajax({
 $("#searchBtn").on("click", function (event) {
   event.preventDefault();
   var search = $("#search").val();
-  console.log(search);
 
   var recipeURL =
     "https://api.edamam.com/search?app_key=" +
@@ -74,6 +82,7 @@ $("#searchBtn").on("click", function (event) {
       var url = $("<a>")
         .attr("href", response.hits[i].recipe.url)
         .text("Go To Recipe");
+        url.attr("target", "_blank");
       var yields = $("<h5>").text("Yields: " + response.hits[i].recipe.yield);
       var image = $("<img>").attr("src", response.hits[i].recipe.image);
       // appending all to a div
@@ -87,7 +96,15 @@ $("#searchBtn").on("click", function (event) {
     glide = new Glide(".glide", {
       type: "carousel",
       gap: "10px",
-      perView: 4
+      perView: 4,
+      breakpoints: {
+        1024: {
+          perView: 2
+        },
+        600: {
+          perView: 1
+        }
+      }
     }).mount();
   });
 });
@@ -114,7 +131,7 @@ $("#makeMeHungry").on("click", function (event) {
       var li = $("<li>").addClass("glide__slide");
       var div = $("<div>");
       var gif = $("<img>").attr("src", response.data[i].images.downsized_medium.url);
-      gif.addClass("is-fullwidth");
+      gif.addClass("gif");
       // appending all to a div
       li.append(div.append(gif));
       // adding classes
@@ -126,7 +143,15 @@ $("#makeMeHungry").on("click", function (event) {
     glide = new Glide(".glide", {
       type: "carousel",
       gap: "10px",
-      perView: 4
+      perView: 4,
+      breakpoints: {
+        1024: {
+          perView: 2
+        },
+        600: {
+          perView: 1
+        }
+      }
     }).mount();
   });
 });
