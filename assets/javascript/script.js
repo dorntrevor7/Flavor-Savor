@@ -114,8 +114,7 @@ $("#makeMeHungry").on("click", function (event) {
       var li = $("<li>").addClass("glide__slide");
       var div = $("<div>");
       var gif = $("<img>").attr("src", response.data[i].images.downsized_medium.url);
-      gif.addClass("gif");
-      gif.attr("style");
+      gif.addClass("is-fullwidth");
       // appending all to a div
       li.append(div.append(gif));
       // adding classes
