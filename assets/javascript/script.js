@@ -1,5 +1,5 @@
-var recipeID = "f918aaaf";
-var recipeKEY = "8b9bf08b57c94197c63717a122f611d7";
+var recipeID = "43295c4f";
+var recipeKEY = "8ec387abba983b997fa25e14be336ccc";
 var glide;
 
 // displaying when the page opens
@@ -14,15 +14,10 @@ var recipeURL =
 $.ajax({
   url: recipeURL,
   method: "GET"
-}).then(function(response) {
-  for (var i = 0; i < 8; i++) {
-    // console.log(response);
+}).then(function (response) {
 
-    // console.log(response.hits[i].recipe.label);
-    // console.log(response.hits[i].recipe.image);
-    // console.log(response.hits[i].recipe.url);
-    // console.log(response.hits[i].recipe.yield);
-    // creating variables for html elements
+  for (var i = 0; i < 8; i++) {
+
     var li = $("<li>").addClass("glide__slide");
     var div = $("<div>");
     var label = $("<h3>").text(response.hits[i].recipe.label);
@@ -47,7 +42,7 @@ $.ajax({
 });
 
 // on click event for search button
-$("#searchBtn").on("click", function(event) {
+$("#searchBtn").on("click", function (event) {
   event.preventDefault();
   var search = $("#search").val();
   console.log(search);
@@ -64,17 +59,15 @@ $("#searchBtn").on("click", function(event) {
   $.ajax({
     url: recipeURL,
     method: "GET"
-  }).then(function(response) {
-    glide.destroy();
-    $("#recipe-slide").empty();
-    for (var i = 0; i < 8; i++) {
-      // console.log(response);
 
-      // console.log(response.hits[i].recipe.label);
-      // console.log(response.hits[i].recipe.image);
-      // console.log(response.hits[i].recipe.url);
-      // console.log(response.hits[i].recipe.yield);
-      // creating variables for html elements
+  }).then(function (response) {
+
+    glide.destroy();
+
+    $("#recipe-slide").empty();
+
+    for (var i = 0; i < 8; i++) {
+
       var li = $("<li>").addClass("glide__slide");
       var div = $("<div>");
       var label = $("<h3>").text(response.hits[i].recipe.label);
@@ -99,3 +92,42 @@ $("#searchBtn").on("click", function(event) {
   });
 });
 
+// on click event for search button
+$("#makeMeHungry").on("click", function (event) {
+  event.preventDefault();
+
+  // Example queryURL for Giphy API
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=food&api_key=CoShZyh0kEFjLGDPzWE6e0UVIcpjTHas&limit=8";
+
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+
+  }).then(function (response) {
+    console.log(response)
+    glide.destroy();
+
+    $("#recipe-slide").empty();
+
+    for (var i = 0; i < 8; i++) {
+
+      var li = $("<li>").addClass("glide__slide");
+      var div = $("<div>");
+      var gif = $("<img>").attr("src", response.data[i].images.downsized_medium.url);
+      gif.addClass("gif");
+      gif.attr("style");
+      // appending all to a div
+      li.append(div.append(gif));
+      // adding classes
+      div.addClass("sauce");
+      console.log(gif)
+      // to link and append to page
+      $("#recipe-slide").append(li);
+    }
+    glide = new Glide(".glide", {
+      type: "carousel",
+      gap: "10px",
+      perView: 4
+    }).mount();
+  });
+});
