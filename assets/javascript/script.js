@@ -2,8 +2,47 @@ var recipeID = "f918aaaf";
 var recipeKEY = "8b9bf08b57c94197c63717a122f611d7";
 var glide;
 
+// displaying when the page opens
+var recipeURL =
+  "https://api.edamam.com/search?app_key=" +
+  recipeKEY +
+  "&app_id=" +
+  recipeID +
+  "&q=recipe" +
+  "&to=18";
+
+$.ajax({
+  url: recipeURL,
+  method: "GET"
+}).then(function (response) {
+
+  for (var i = 0; i < 8; i++) {
+
+    var li = $("<li>").addClass("glide__slide");
+    var div = $("<div>");
+    var label = $("<h3>").text(response.hits[i].recipe.label);
+    var url = $("<a>")
+      .attr("href", response.hits[i].recipe.url)
+      .text("Go To Recipe");
+    var yields = $("<h5>").text("Yields: " + response.hits[i].recipe.yield);
+    var image = $("<img>").attr("src", response.hits[i].recipe.image);
+    // appending all to a div
+    li.append(div.append(label, url, yields, image));
+    // adding classes
+    div.addClass("sauce");
+
+    // to link and append to page
+    $("#recipe-slide").append(li);
+  }
+  glide = new Glide(".glide", {
+    type: "carousel",
+    gap: "10px",
+    perView: 4
+  }).mount();
+});
+
 // on click event for search button
-$("#searchBtn").on("click", function(event) {
+$("#searchBtn").on("click", function (event) {
   event.preventDefault();
   var search = $("#search").val();
   console.log(search);
@@ -20,17 +59,15 @@ $("#searchBtn").on("click", function(event) {
   $.ajax({
     url: recipeURL,
     method: "GET"
-  }).then(function(response) {
-    glide.destroy();
-    $("#recipe-slide").empty();
-    for (var i = 0; i < 8; i++) {
-      // console.log(response);
 
-      // console.log(response.hits[i].recipe.label);
-      // console.log(response.hits[i].recipe.image);
-      // console.log(response.hits[i].recipe.url);
-      // console.log(response.hits[i].recipe.yield);
-      // creating variables for html elements
+  }).then(function (response) {
+
+    glide.destroy();
+
+    $("#recipe-slide").empty();
+
+    for (var i = 0; i < 8; i++) {
+
       var li = $("<li>").addClass("glide__slide");
       var div = $("<div>");
       var label = $("<h3>").text(response.hits[i].recipe.label);
@@ -55,46 +92,41 @@ $("#searchBtn").on("click", function(event) {
   });
 });
 
-// displaying when the page opens
-var recipeURL =
-  "https://api.edamam.com/search?app_key=" +
-  recipeKEY +
-  "&app_id=" +
-  recipeID +
-  "&q=recipe" +
-  "&to=18";
+// on click event for search button
+$("#makeMeHungry").on("click", function (event) {
+  event.preventDefault();
 
-$.ajax({
-  url: recipeURL,
-  method: "GET"
-}).then(function(response) {
-  for (var i = 0; i < 8; i++) {
-    // console.log(response);
+  // Example queryURL for Giphy API
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=food&api_key=CoShZyh0kEFjLGDPzWE6e0UVIcpjTHas&limit=8";
 
-    // console.log(response.hits[i].recipe.label);
-    // console.log(response.hits[i].recipe.image);
-    // console.log(response.hits[i].recipe.url);
-    // console.log(response.hits[i].recipe.yield);
-    // creating variables for html elements
-    var li = $("<li>").addClass("glide__slide");
-    var div = $("<div>");
-    var label = $("<h3>").text(response.hits[i].recipe.label);
-    var url = $("<a>")
-      .attr("href", response.hits[i].recipe.url)
-      .text("Go To Recipe");
-    var yields = $("<h5>").text("Yields: " + response.hits[i].recipe.yield);
-    var image = $("<img>").attr("src", response.hits[i].recipe.image);
-    // appending all to a div
-    li.append(div.append(label, url, yields, image));
-    // adding classes
-    div.addClass("sauce");
+  $.ajax({
+    url: queryURL,
+    method: "GET"
 
-    // to link and append to page
-    $("#recipe-slide").append(li);
-  }
-  glide = new Glide(".glide", {
-    type: "carousel",
-    gap: "10px",
-    perView: 4
-  }).mount();
+  }).then(function (response) {
+    console.log(response)
+    glide.destroy();
+
+    $("#recipe-slide").empty();
+
+    for (var i = 0; i < 8; i++) {
+
+      var li = $("<li>").addClass("glide__slide");
+      var div = $("<div>");
+      var gif = $("<img>").attr("src", response.data[i].images.downsized_medium.url);
+      gif.addClass("is-fullwidth");
+      // appending all to a div
+      li.append(div.append(gif));
+      // adding classes
+      div.addClass("sauce");
+      console.log(gif)
+      // to link and append to page
+      $("#recipe-slide").append(li);
+    }
+    glide = new Glide(".glide", {
+      type: "carousel",
+      gap: "10px",
+      perView: 4
+    }).mount();
+  });
 });
