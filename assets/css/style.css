@@ -35,7 +35,7 @@ nav{
     padding: 0px;
 }
 
-#savedRecipes{
+#makeMeHungry{
     font-family: 'Special Elite', cursive; 
     color: #080808;
     font-size: 30px;
@@ -114,4 +114,9 @@ nav{
     border-color: #77f1be;
     background-color: whitesmoke;
     height: 40px;
+}
+/* style for sizing of gif */
+.gif{
+    height: 300px;
+    width: 300px;
 }
