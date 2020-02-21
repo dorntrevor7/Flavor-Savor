@@ -24,6 +24,7 @@ $.ajax({
     var url = $("<a>")
       .attr("href", response.hits[i].recipe.url)
       .text("Go To Recipe");
+      url.attr("target", "_blank");
     var yields = $("<h5>").text("Yields: " + response.hits[i].recipe.yield);
     var image = $("<img>").attr("src", response.hits[i].recipe.image);
     // appending all to a div
@@ -74,6 +75,7 @@ $("#searchBtn").on("click", function (event) {
       var url = $("<a>")
         .attr("href", response.hits[i].recipe.url)
         .text("Go To Recipe");
+        url.attr("target", "_blank");
       var yields = $("<h5>").text("Yields: " + response.hits[i].recipe.yield);
       var image = $("<img>").attr("src", response.hits[i].recipe.image);
       // appending all to a div
