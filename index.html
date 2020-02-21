@@ -9,70 +9,62 @@
     <!-- Optional Theme Stylesheet -->
     <link rel="stylesheet" href="assets/css/libs/glide.theme.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Special+Elite&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" rel="stylesheet">
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.css" rel="stylesheet" />
     <!-- Required Core Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-
     <nav class="level">
         <p class="level-item has-text-centered">
-            <a class="link is-info home">Home</a>
+            <a class="link is-info" id="home">Home</a>
         </p>
         <p class="level-item has-text-centered">
             <a class="link is-info flavorSavor">Flavor Savor</a>
         </p>
         <p class="level-item has-text-centered">
-            <a class="link is-info savedRecipes">Saved Recipes</a>
+            <a class="link is-info" id="makeMeHungry">Make Me Hungry</a>
         </p>
-        <p class="level-item has-text-centered ">
+        <div class="level-item has-text-centered">
             <div class="field">
                 <div class="columns control search">
-                    <input class="input is-small" type="text" placeholder="Ingredient"><button
+                    <input class="input is-small" id="search" type="text" placeholder="Ingredient" /><button
                         id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
-        </p>
+        </div>
     </nav>
-    
+
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
-                </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
-                </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
-                </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
-                </li>
-                <li class="glide__slide">
-                    <img src="http://placehold.it/200x200" alt="" />
-                </li>
-            </ul>
+            <ul class="glide__slides" id="recipe-slide"></ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+                prev
+            </button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                next
+            </button>
         </div>
     </div>
 
+    <div id="homeRecipes"></div>
 
+    <footer>
+        <div class="copyright">
+            <strong>Flavor Savor</strong>
+            <br>
+            <p>by Megan, Anthony, Tanner, Trevor</p> 
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="assets/javascript/script.js"></script>
     <script src="assets/javascript/libs/glide.min.js"></script>
     <script src="assets/javascript/script.js"></script>
-    <script>
-        new Glide(".glide", { type: "carousel", gap: "10px", perView: 4 }).mount({
-            Controls: Glide.Controls
-        });
-    </script>
-
 </body>
 
 </html>

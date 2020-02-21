@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(226, 225, 225);
+    min-height: 100vh;
+    background-image: url(https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 }
 
 nav{ 
@@ -12,7 +13,7 @@ nav{
     border-bottom: ridge 5px grey;
 }
 
-.home{
+#home{
     font-family: 'Special Elite', cursive; 
     color: #080808;
     font-size: 30px;
@@ -34,7 +35,7 @@ nav{
     padding: 0px;
 }
 
-.savedRecipes{
+#makeMeHungry{
     font-family: 'Special Elite', cursive; 
     color: #080808;
     font-size: 30px;
@@ -50,4 +51,72 @@ nav{
     border-color: #d9f7ea;
     color: black;
     background-color: #77f1be;
+}
+
+/* style for homeRecipes */
+#homeRecipes{
+    text-align: center;
+    font-family: 'Special Elite', cursive; 
+    color: #080808;
+}
+.sauce{
+    border: ridge grey 4px;
+    width: 700px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+
+.links {
+    font-size: 40px;
+}
+.recipe {
+    border: ridge #77f1be 4px;
+    width: 700px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+/* Style for the footer */
+    
+.copyright {
+    padding-top: 5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    color: lightslategray;
+    text-align: center;
+    border-top-style: solid;
+    border-color: #77f1be;
+    background-color: whitesmoke;
+    height: 40px;
+}
+    
+.cText {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.portcopy {
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    color: lightslategray;
+    text-align: center;
+    border-top-style: solid;
+    border-color: #77f1be;
+    background-color: whitesmoke;
+    height: 40px;
+}
+/* style for sizing of gif */
+.gif{
+    height: 300px;
+    width: 300px;
 }
