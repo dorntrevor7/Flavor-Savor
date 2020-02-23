@@ -1,8 +1,10 @@
+/* style for the body */
 body{
     min-height: 100vh;
     background-image: url(https://images.pexels.com/photos/2341290/pexels-photo-2341290.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
 }
 
+/* styling for the header */
 nav{ 
     background-color: #77f1be;
     color: #080808;
@@ -20,14 +22,7 @@ nav{
     text-shadow: 4px 4px 6px grey;
 }
 
-.menu{
-    font-family: 'Special Elite', cursive; 
-    color: #080808;
-    font-size: 30px;
-    text-shadow: 4px 4px 6px grey;
-}
-
-.flavorSavor{
+#flavorSavor{
     font-family: 'Fredericka the Great', cursive; 
     color: white;
     text-shadow: 4px 4px 6px black;
@@ -83,12 +78,12 @@ nav{
     padding: 15px;
     background-color: whitesmoke;
 }
+
 /* Style for the footer */
-    
 .copyright {
-    padding-top: 5px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    padding-top: 5px;
     width: 100%;
     font-size: 10px;
     color: lightslategray;
