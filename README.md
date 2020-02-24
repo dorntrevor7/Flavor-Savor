@@ -15,7 +15,7 @@ In this project our team created a web based app called Flavor Savor that finds 
 
 The following image demonstrates on the computer:
 
-![SC Flavor Savor computer display](assets/imgs/sc-flavor-savor.png)
+![SC Flavor Savor computer display](assets/imgs/flavor-savor-sc.png)
 
 <br>
 
